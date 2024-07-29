@@ -1,10 +1,9 @@
 # Personal Portfolio 🔥
 
-:star: Star me on GitHub — it helps!
 
-[![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/rajaprerak/rajaprerak.github.io/commits/master)
-[![Website shields.io](https://img.shields.io/badge/website-up-yellow)](http://rajaprerak.github.io/)
-[![Ask Me Anything !](https://img.shields.io/badge/ask%20me-linkedin-1abc9c.svg)](https://www.linkedin.com/in/rajaprerak/)
+[![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/HrithikGit/personal-portfolio)
+[![Website shields.io](https://img.shields.io/badge/website-up-yellow)](http://hrithik-manda.netlify.app/)
+[![Ask Me Anything !](https://img.shields.io/badge/ask%20me-linkedin-1abc9c.svg)](https://www.linkedin.com/in/hrithik-manda/)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 ### Website Preview
