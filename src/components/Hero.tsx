@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Wave from "react-wavify";
 import profilePhoto from "../assets/profile3.jpg";
+import { Github, Code, Linkedin } from "lucide-react";
 
 const roles = [
   "Full Stack Developer",
@@ -80,6 +81,53 @@ export default function Hero() {
           {text}
           <span className="animate-blink">|</span>
         </motion.h2>
+
+        {/* Social Links with Effects */}
+        <motion.div
+          className="mt-4 flex justify-around"
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.8 }}
+        >
+          <motion.div className="w-30 flex items-center justify-around">
+            <motion.a
+              href="https://leetcode.com/u/mandhahrithik"
+              className="mx-4"
+              whileHover={{
+                scale: 1.2,
+                rotate: 5,
+                color: "#ff5722",
+              }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Code size={30} />
+            </motion.a>
+            <motion.a
+              href="https://github.com/HrithikGit"
+              className="mx-4"
+              whileHover={{
+                scale: 1.2,
+                rotate: 5,
+                color: "#6cc644",
+              }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Github size={30} />
+            </motion.a>
+            <motion.a
+              href="https://www.linkedin.com/in/hrithik-manda#experience"
+              className="mx-4"
+              whileHover={{
+                scale: 1.2,
+                rotate: 5,
+                color: "#0077b5",
+              }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Linkedin size={30} />
+            </motion.a>
+          </motion.div>
+        </motion.div>
 
         {/* Scroll to Explore */}
         <motion.div

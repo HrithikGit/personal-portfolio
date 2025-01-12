@@ -60,6 +60,18 @@ export default function Header() {
                 {item}
               </motion.button>
             ))}
+            <a
+              target="_blank"
+              href="https://docs.google.com/document/d/1EOQq2rFGONz2wwj4HLt1GlszAg6hybJDWpOIjYozynU"
+            >
+              <motion.button
+                className="text-gray-800 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Resume
+              </motion.button>
+            </a>
             <motion.button
               onClick={toggleTheme}
               className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
