@@ -5,7 +5,7 @@ const experiences = [
   {
     company: "University of Central Florida",
     position: "Teaching Assistant",
-    period: "2023 - 2022",
+    period: "2024 - 2025",
     location: "Orlando, FL",
     description:
       "Assisted students in Data Structures and Computer Forensics by explaining concepts, conducting labs, grading assignments, and providing feedback. Supported practical applications of theory through one-on-one and group guidance.",
