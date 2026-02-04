@@ -1,0 +1,6 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="120" rx="24" fill="#111827"/>
+  <rect x="26" y="28" width="68" height="68" rx="18" fill="#22D3EE" opacity="0.18"/>
+  <text x="22" y="70" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">SN</text>
+  <path d="M70 44C78 44 84 50 84 58C84 66 78 72 70 72H54" stroke="#22D3EE" stroke-width="6" stroke-linecap="round"/>
+</svg>
