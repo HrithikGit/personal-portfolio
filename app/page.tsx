@@ -141,30 +141,17 @@ const awards = [
   },
 ];
 
-const readings = [
-  {
-    title: 'Clean Code',
-    author: 'Robert C. Martin',
-    image: 'https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg',
-    note: 'Timeless principles for writing maintainable, high-quality software.',
-  },
-  {
-    title: 'Head First Design Patterns',
-    author: 'Eric Freeman & Elisabeth Robson',
-    image: 'https://covers.openlibrary.org/b/isbn/9781492078005-L.jpg',
-    note: 'Pattern-driven thinking for scalable, flexible system design.',
-  },
-];
 
 export default function Home() {
   return (
-    <div className="grid-lines">
-      <section className="section">
+    <div className="grid-lines relative">
+      <SectionCompanion />
+      <section id="hero" className="section">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div className="space-y-8">
               <div className="mono text-xs text-white/60">Software Engineer</div>
-              <h1 className="text-4xl font-bold leading-tight sm:text-6xl">
+              <h1 className="text-4xl font-bold leading-tight sm:text-6xl" data-companion-anchor="hero">
                 Hrithik Manda <span className="gradient-text">builds resilient systems</span> that scale.
               </h1>
               <p className="text-lg text-white/70">
@@ -175,6 +162,9 @@ export default function Home() {
               <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm text-white/80">
                 <span className="h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(34,211,238,0.8)]" />
                 I outsource the boring work to AI and keep the fun problems for myself.
+              </div>
+              <div className="rounded-2xl border border-white/20 bg-white/5 px-4 py-3 text-sm text-white/80">
+                Robot assistant: “Beware — Hrithik ships fast, scales hard, and makes systems behave.”
               </div>
               <div className="flex flex-wrap gap-3">
                 <a href="#contact" className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:-translate-y-1">
@@ -217,11 +207,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="section">
+      <section id="about" className="section" data-companion-anchor="about">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="card">
             <div className="mono text-xs text-white/60">About</div>
-            <h2 className="section-title mt-4">A builder who ships fast and scales hard.</h2>
+            <h2 className="section-title mt-4" data-companion-anchor="about">A builder who ships fast and scales hard.</h2>
             <p className="section-subtitle mt-4">
               I specialize in architecting large-scale platforms, deep system integrations, and high-throughput services. I love
               exploring the practical capabilities of AI while shipping resilient distributed systems and cloud automation across AWS.
@@ -256,16 +246,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="principles" className="section">
+      <section id="principles" className="section" data-companion-anchor="principles">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <div className="mono text-xs text-white/60">Core Principles</div>
-              <h2 className="section-title">How I show up every day</h2>
             </div>
-            <p className="section-subtitle">
-              The operating principles that guide how I build, collaborate, and deliver impact.
-            </p>
+            <div className="section-lottie">
+              <lottie-player
+                src="/lottie/study-abroad.json"
+                background="transparent"
+                speed="1"
+                style={{ width: '220px', height: '140px' }}
+                loop
+                autoplay
+              />
+            </div>
           </div>
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {principles.map((principle) => (
@@ -284,16 +280,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="skills" className="section">
+      <section id="skills" className="section" data-companion-anchor="skills">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <div className="mono text-xs text-white/60">Skills</div>
-              <h2 className="section-title">Full-stack + AI-native toolbox</h2>
             </div>
-            <p className="section-subtitle">
-              Languages, frameworks, and infrastructure I use to build reliable, high-performance systems.
-            </p>
+            <div className="section-lottie">
+              <lottie-player
+                src="/lottie/man-working.json"
+                background="transparent"
+                speed="1"
+                style={{ width: '220px', height: '140px' }}
+                loop
+                autoplay
+              />
+            </div>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
             {skills.map((skill) => (
@@ -306,16 +308,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="experience" className="section">
+      <section id="experience" className="section" data-companion-anchor="experience">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <div className="mono text-xs text-white/60">Experience</div>
-              <h2 className="section-title">High-impact roles, real-world scale</h2>
             </div>
-            <p className="section-subtitle">
-              Delivered AI-powered platforms, resilient deployments, and mission-critical systems across global orgs.
-            </p>
+            <div className="section-lottie">
+              <lottie-player
+                src="/lottie/man-working.json"
+                background="transparent"
+                speed="1"
+                style={{ width: '220px', height: '140px' }}
+                loop
+                autoplay
+              />
+            </div>
           </div>
 
           <div className="mt-10 grid gap-6">
@@ -344,16 +352,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="section">
+      <section id="projects" className="section" data-companion-anchor="projects">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <div className="mono text-xs text-white/60">Projects</div>
-              <h2 className="section-title">Signature builds</h2>
             </div>
-            <p className="section-subtitle">
-              Projects that showcase my obsession with performance, intelligence, and reliability.
-            </p>
+            <div className="section-lottie">
+              <lottie-player
+                src="/lottie/man-working.json"
+                background="transparent"
+                speed="1"
+                style={{ width: '220px', height: '140px' }}
+                loop
+                autoplay
+              />
+            </div>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -373,16 +387,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="education" className="section">
+      <section id="education" className="section" data-companion-anchor="education">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <div className="mono text-xs text-white/60">Education</div>
-              <h2 className="section-title">Academic foundation</h2>
             </div>
-            <p className="section-subtitle">
-              Deep technical coursework and research-driven learning.
-            </p>
+            <div className="section-lottie">
+              <lottie-player
+                src="/lottie/study-abroad.json"
+                background="transparent"
+                speed="1"
+                style={{ width: '220px', height: '140px' }}
+                loop
+                autoplay
+              />
+            </div>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -398,49 +418,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="readings" className="section">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div>
-              <div className="mono text-xs text-white/60">Readings</div>
-              <h2 className="section-title">Books that shape my craft</h2>
-            </div>
-            <p className="section-subtitle">
-              My go-to reads for clean architecture, scalable systems, and design patterns that last.
-            </p>
-          </div>
-          <p className="mt-4 text-sm text-white/60">
-            I love reading books and learning from them — feel free to drop any interesting suggestions.
-          </p>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {readings.map((book) => (
-              <div key={book.title} className="card group overflow-hidden">
-                <div
-                  className="h-56 w-full rounded-2xl border border-white/10 bg-cover bg-center transition duration-500 group-hover:scale-105 group-hover:-rotate-1"
-                  style={{
-                    backgroundImage: `linear-gradient(140deg, rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.8)), url('${book.image}')`,
-                  }}
-                />
-                <div className="mt-5 text-lg font-semibold">{book.title}</div>
-                <div className="text-sm text-white/60">{book.author}</div>
-                <p className="mt-3 text-sm text-white/70">{book.note}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="awards" className="section">
+      <section id="awards" className="section" data-companion-anchor="awards">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <div className="mono text-xs text-white/60">Awards</div>
-              <h2 className="section-title">Recognition & achievements</h2>
             </div>
-            <p className="section-subtitle">
-              A quick snapshot of standout wins across industry and competitive programming.
-            </p>
+            <div className="section-lottie">
+              <lottie-player
+                src="/lottie/man-working.json"
+                background="transparent"
+                speed="1"
+                style={{ width: '220px', height: '140px' }}
+                loop
+                autoplay
+              />
+            </div>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {awards.map((award) => (
@@ -453,18 +446,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="section">
+      <section id="contact" className="section" data-companion-anchor="contact">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="card">
-            <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-              <div>
-                <div className="mono text-xs text-white/60">Contact</div>
-                <h2 className="section-title">Let&apos;s build something bold.</h2>
-                <p className="section-subtitle mt-3">
-                  Open to full-time roles, AI platform engineering, and high-impact collaborations.
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-3 text-sm">
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div>
+              <div className="mono text-xs text-white/60">Contact</div>
+            </div>
+            <div className="section-lottie">
+              <lottie-player
+                src="/lottie/man-robot.json"
+                background="transparent"
+                speed="1"
+                style={{ width: '220px', height: '140px' }}
+                loop
+                autoplay
+              />
+            </div>
+            <div className="flex flex-wrap gap-3 text-sm">
                 <a href="mailto:mandhahrithik@gmail.com" className="rounded-full border border-white/20 px-4 py-2 text-white/80 hover:border-white/60">
                   mandhahrithik@gmail.com
                 </a>
@@ -488,3 +487,4 @@ export default function Home() {
     </div>
   );
 }
+import SectionCompanion from './components/SectionCompanion';

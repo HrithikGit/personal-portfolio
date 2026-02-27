@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import { ThemeProvider } from "next-themes";
@@ -42,6 +43,10 @@ export default function RootLayout({
         className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased min-h-screen bg-[hsl(var(--background))] text-[hsl(var(--foreground))]`}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <Script
+            src="https://unpkg.com/@lottiefiles/lottie-player@1.7.1/dist/lottie-player.js"
+            strategy="afterInteractive"
+          />
           <Navbar />
           <main>{children}</main>
         </ThemeProvider>
